@@ -1,6 +1,22 @@
+@use 'colors';
+
 .container {
+  background-color: colors.$clr-primary-500;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.container:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  display: inline;
+  top: -25%;
+  left: -25%;
+  height: 100vh;
+  width: 100vw;
+  background: url('../images/bg-pattern-top.svg') no-repeat;
+  background-size: contain;
 }

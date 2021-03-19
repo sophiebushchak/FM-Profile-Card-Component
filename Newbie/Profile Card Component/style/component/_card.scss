@@ -1,21 +1,56 @@
+@use '../base/colors';
+
 .card {
   font-size: 18px;
-  max-width: 600px;
-  min-width: 22em;
+  max-width: 800px;
+  min-width: 400px;
+  border-radius: 16px;
+  -moz-border-radius: 16px;
+  z-index: 2;
 
   @media(max-width: 375px) {
     max-width: 325px;
   }
 
-  background-color: red;
+  background-color: #fff;
+
+  .card-full-name, .card-stat-quantity {
+    color: colors.$clr-primary-600;
+    font-weight: 700;
+  }
+
+  .card-location, .card-age, .card-stat-unit {
+    color: colors.$clr-primary-700;
+  }
+
+  .card-graphic-header {
+    height: 10em;
+    width: 100%;
+    background-image: url('../images/bg-pattern-card.svg');
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  .card-profile-picture {
+    position: absolute;
+    top: -55px;
+    border-radius: 100%;
+    width: 110px;
+    border: 6px white solid;
+  }
 
   .card-identification-header {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 4em 0 1em 0;
-    border-bottom: 1px black solid;
+    border-bottom: 1px transparentize(colors.$clr-neutral-500, 0.5) solid;
+
+    .card-location {
+      font-size: 16px
+    }
   }
 
   .card-details-footer {
@@ -29,6 +64,11 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+    }
+
+    .card-stat-unit {
+      letter-spacing: 1px;
+      font-size: 14px;
     }
 
     .card-detail-item-edge {
