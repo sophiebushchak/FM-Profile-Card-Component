@@ -1,0 +1,9 @@
+//Google Fonts
+@import url(https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700);
+
+$font-stack: 'Kumbh Sans', sans-serif;
+
+body {
+  font-family: $font-stack;
+  font-weight: normal;
+}

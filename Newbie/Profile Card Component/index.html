@@ -6,16 +6,12 @@
         <!-- displays site properly based on user's device -->
 
         <link rel='icon' type='image/png' sizes='32x32' href='./images/favicon-32x32.png'>
+        <link rel='stylesheet' type='text/css' href='./style/main.css'>
 
         <title>Frontend Mentor | Profile card component</title>
 
         <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
         <style>
-            .attribution {
-                font-size: 11px;
-                text-align: center;
-            }
-
             .attribution a {
                 color: hsl(228, 45%, 44%);
             }
@@ -23,31 +19,40 @@
     </head>
 
     <body>
-        <div class='card-identification-header'>
-            <div>
-                <span class='card-full-name'>Victor Crest</span>
-                <span class='card-age'>26</span>
-            </div>
-            <div>
-                <span class='card-location'>London</span>
-            </div>
-        </div>
+        <div class='container'>
+            <div class='card'>
+                <div class='card-graphic-header'>
+
+                </div>
+
+                <div class='card-identification-header'>
+                    <div>
+                        <span class='card-full-name'>Victor Crest</span>
+                        <span class='card-age'>26</span>
+                    </div>
+
+                    <div>
+                        <span class='card-location'>London</span>
+                    </div>
+                </div>
 
 
-        <div class='card-details-footer'>
-            <div>
-                <span class='card-stat-quantity'>80K</span>
-                <span class='card-stat-unit'>Followers</span>
-            </div>
+                <div class='card-details-footer'>
+                    <div class='card-detail-item card-detail-item-edge'>
+                        <span class='card-stat-quantity'>80K</span>
+                        <span class='card-stat-unit'>Followers</span>
+                    </div>
 
-            <div>
-                <span class='card-stat-quantity'>803K</span>
-                <span class='card-stat-unit'>Likes</span>
-            </div>
+                    <div class='card-detail-item'>
+                        <span class='card-stat-quantity'>803K</span>
+                        <span class='card-stat-unit'>Likes</span>
+                    </div>
 
-            <div>
-                <span class='card-stat-quantity'>1.4K</span>
-                <span class='card-stat-unit'>Photos</span>
+                    <div class='card-detail-item card-detail-item-edge'>
+                        <span class='card-stat-quantity'>1.4K</span>
+                        <span class='card-stat-unit'>Photos</span>
+                    </div>
+                </div>
             </div>
         </div>
        <!-- <div class='attribution'>

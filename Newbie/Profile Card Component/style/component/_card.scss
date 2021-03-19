@@ -1,0 +1,39 @@
+.card {
+  font-size: 18px;
+  max-width: 600px;
+  min-width: 22em;
+
+  @media(max-width: 375px) {
+    max-width: 325px;
+  }
+
+  background-color: red;
+
+  .card-identification-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 4em 0 1em 0;
+    border-bottom: 1px black solid;
+  }
+
+  .card-details-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5em 0;
+
+    .card-detail-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-detail-item-edge {
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+  }
+}

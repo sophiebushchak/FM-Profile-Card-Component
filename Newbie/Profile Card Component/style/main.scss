@@ -1,4 +1,3 @@
-@import 'base/root';
-@import 'base/reset';
+@use 'base';
 
-
+@use 'component/card';
