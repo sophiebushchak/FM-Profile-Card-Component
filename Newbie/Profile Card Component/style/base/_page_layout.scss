@@ -1,8 +1,11 @@
 @use 'colors';
 
 .container {
+  position: relative;
+  overflow: hidden;
   background-color: colors.$clr-primary-500;
   height: 100vh;
+  max-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,13 +13,76 @@
 
 .container:before {
   content: '';
-  position: absolute;
-  z-index: 1;
-  display: inline;
-  top: -25%;
-  left: -25%;
-  height: 100vh;
-  width: 100vw;
+  display: block;
   background: url('../images/bg-pattern-top.svg') no-repeat;
-  background-size: contain;
+  background-size: cover;
+  position: absolute;
+  $height: calc(50vw * 1.3);
+  $width: calc(50vw * 1.3);
+  height: $height;
+  width: $width;
+  min-height: 700px;
+  min-width: 700px;
+  left: calc((50vw * 1.3) / 4.2 * -1);
+  top: calc((50vw * 1.3) / 2 * -1);
+  z-index: 1;
+}
+
+.container:after {
+  content: '';
+  display: block;
+  background: url('../images/bg-pattern-bottom.svg') no-repeat;
+  background-size: cover;
+  position: absolute;
+  $height: calc(50vw * 1.3);
+  $width: calc(50vw * 1.3);
+  height: $height;
+  width: $width;
+  min-height: 700px;
+  min-width: 700px;
+  right: calc((50vw * 1.3) / 4.2 * -1);
+  bottom: calc((50vw * 1.3) / 2 * -1);
+  z-index: 1;
+  overflow: hidden;
+}
+
+@media(max-width: 650px) {
+  .container:before {
+    left: calc((55vw * 1.3) * -1);
+    top: calc(55vw * -1);
+  }
+
+  .container:after {
+    right: calc((55vw * 1.3) * -1);
+    bottom: calc(55vw * -1);
+  }
+}
+
+@media(max-width: 400px) {
+  .container:before {
+    max-width: 375px;
+    max-height: 375px;
+    left: calc((70vw * 1.5) * -1);
+    top: calc(70vw * -1);
+  }
+
+  .container:after {
+    max-width: 375px;
+    max-height: 375px;
+    right: calc((70vw * 1.5) * -1);
+    bottom: calc(70vw * -1);
+  }
+}
+
+
+@media(max-width: 350px) {
+  .container:before {
+    left: calc((70vw * 2) * -1);
+    top: calc(70vw * 1.5 * -1);
+  }
+
+  .container:after {
+    right: calc((70vw * 2) * -1);
+    bottom: calc(70vw * 1.5 * -1);
+  }
 }
